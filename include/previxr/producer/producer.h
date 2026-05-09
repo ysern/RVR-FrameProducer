@@ -12,5 +12,5 @@ class PREVIXR_PRODUCER_API Producer
 // TODO: Declare PreviXR::Producer::Producer
 };
 
-} // producer
-} // previxr
+} // namespace producer
+} // namespace previxr
