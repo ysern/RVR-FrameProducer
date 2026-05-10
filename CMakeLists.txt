@@ -1,23 +1,23 @@
-add_library(previxr-producer SHARED
+add_library(rvr-producer SHARED
   src/producer.cpp
 )
 
-add_library(PreviXR::Producer
+add_library(RVR::Producer
   ALIAS
-    previxr-producer
+    rvr-producer
 )
 
-target_include_directories(previxr-producer
+target_include_directories(rvr-producer
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
 
-target_compile_definitions(previxr-producer
-  PRIVATE PREVIXR_PRODUCER_BUILD
+target_compile_definitions(rvr-producer
+  PRIVATE RVR_PRODUCER_BUILD
 )
 
-install(TARGETS previxr-producer
+install(TARGETS rvr-producer
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
